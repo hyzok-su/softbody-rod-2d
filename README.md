@@ -12,6 +12,8 @@ In contrast to conventional mass–spring systems, which typically employ a sing
 
 Spring damping acts along the tangent direction of the beam segment, corresponding to the line-of-action velocity between connected particles, and primarily attenuates axial oscillations. Rotational damping, defined in the perpendicular direction to the beam segment, is applied to velocity components that contribute to angular motion and bending, thereby directly controlling curvature-induced oscillations. Aerodynamic drag introduces an additional global dissipation term that scales with velocity magnitude, modeling ambient resistance.
 
+As a result, standard (isotropic) damping often leads to overly fast convergence or motion distortions that are less physically accurate. In contrast, orthogonal damping improves numerical stability and produces convergence behavior that more closely aligns with real physical dynamics.
+
 - Rope :
   
 <p>
@@ -32,8 +34,6 @@ Spring damping acts along the tangent direction of the beam segment, correspondi
 
 
 - The three images, from left to right, show simulations without damping, with standard damping, and with orthogonal damping.
-
-As a result, standard (isotropic) damping often leads to overly fast convergence or motion distortions that are less physically accurate. In contrast, orthogonal damping improves numerical stability and produces convergence behavior that more closely aligns with real physical dynamics.
 
 ## Joint
 
