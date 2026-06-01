@@ -28,6 +28,8 @@ The three rows, from top to bottom, illustrate rope-like, beam-like, and mixed s
 
 The three columns, from left to right, show simulations without damping, with standard damping, and with orthogonal damping.
 
+As a result, standard (isotropic) damping often leads to overly fast convergence or motion distortions that are less physically accurate. In contrast, orthogonal damping improves numerical stability and produces convergence behavior that more closely aligns with real physical dynamics.
+
 ## Joint
 
 This project also extends inter-segment connectivity through a unified joint formulation, where connections between rod segments are parameterized as rigid, hinge, or partially constrained joints. The formulation introduces a hidden line element connected to all incident rods within the same bending-constraint framework. This lightweight approach avoids explicitly modeling angular motion while still producing stable and visually plausible deformation results.
