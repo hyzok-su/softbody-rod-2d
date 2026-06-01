@@ -24,6 +24,12 @@ Spring damping acts along the tangent direction of the beam segment, correspondi
 
 ## Joint
 
+This project also extends inter-segment connectivity through a unified joint formulation, where each connection between rod segments is parameterized as rigid, hinge, or partial within the same bending-constraint framework.
+
+A rigid joint is implemented as a high-stiffness bending constraint, strongly suppressing relative angular deformation and effectively enforcing near-zero curvature between adjacent segments. A hinge joint removes bending resistance, allowing free relative rotation while maintaining positional connectivity; this formulation naturally enables pendulum-like behavior when combined with an anchored endpoint. A partial joint introduces intermediate bending stiffness, providing controllable resistance to angular deformation and enabling smooth transitions between flexible and stiff responses.
+
+Consequently, different material and structural behaviors can be expressed within a single unified system.
+
 <p>
 <img src="./docs/hingeJoint.gif" height="235" width="30%"/>   <img src="./docs/partialJoint.gif" height="235" width="30%"/>  <img src="./docs/rigidJoint.gif" height="235" width="30%"/>   
 <p/>
