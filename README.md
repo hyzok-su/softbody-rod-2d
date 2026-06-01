@@ -7,5 +7,5 @@
 <p/>
   
 <p>
-<img src="./docs/nodampingPendulum.gif" height="256"/>    <img src="./docs/conventionalDampingPendulum.gif" height="256"/>   <img src="./docs/ourdampingPendulum.gif" height="256"/>
+<img src="./docs/nodampingPendulum.gif" height="240"/>    <img src="./docs/conventionalDampingPendulum.gif" height="240"/>   <img src="./docs/ourdampingPendulum.gif" height="240"/>
 <p/>
