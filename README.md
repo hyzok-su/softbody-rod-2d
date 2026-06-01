@@ -49,5 +49,5 @@ Another key extension of the proposed method is its support for topological tear
 ## Collision
 
 <p>
-<img src="./docs/staticfriction.gif" height="235" width="20%"/>   <img src="./docs/nofriction.gif" height="235" width="20%"/>  <img src="./docs/fullrestitution.gif" height="235" width="20%"/>    <img src="./docs/norestitution.gif" height="235" width="20%"/>  
+<img src="./docs/staticfriction.gif" height="245" width="20%"/>   <img src="./docs/nofriction.gif" height="245" width="20%"/>  <img src="./docs/fullrestitution.gif" height="245" width="20%"/>    <img src="./docs/norestitution.gif" height="245" width="20%"/>  
 <p/>
