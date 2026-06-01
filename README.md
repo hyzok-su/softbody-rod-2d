@@ -9,3 +9,7 @@
 <p>
 <img src="./docs/nodampingPendulum.gif" height="200" width="30%"/>    <img src="./docs/conventionalDampingPendulum.gif" height="200" width="30%"/>   <img src="./docs/ourdampingPendulum.gif" height="200" width="30%"/>
 <p/>
+
+<p>
+<img src="./docs/friction.gif" height="200" width="30%"/>    <img src="./docs/nofriction.gif" height="200" width="30%"/>  
+<p/>
