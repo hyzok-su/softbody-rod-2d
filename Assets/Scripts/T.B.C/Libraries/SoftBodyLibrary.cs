@@ -5,9 +5,7 @@ using System;
 
 namespace SoftBodyLibrary
 {
-    // ---------------------------
     // Particle, Spring, Bend, Anchor
-    // ---------------------------
     public struct Particle
     {
         public Vector2 Position;
@@ -305,11 +303,6 @@ namespace SoftBodyLibrary
             //compute rod force & mark break
             int rodCount = rodLength;
 
-            //int[] splitIndices = new int[rodCount];
-
-            //Vector2[][] springForces = new Vector2[rodCount][];
-            //Vector2[][] bendForces = new Vector2[rodCount][];
-
             for (int i = 0; i < rodCount; i++)
             {
 
@@ -323,7 +316,6 @@ namespace SoftBodyLibrary
                 //springs in a rod
 
                 int[] springIndices = rod.SpringIndices;
-                //Vector2[] sForces = new Vector2[springIndices.Length];
 
                 for (int j = 0; j < springIndices.Length; j++)
                 {
@@ -344,7 +336,6 @@ namespace SoftBodyLibrary
                     Vector2 AB = delta / dist;
                     float deltaX = dist - s.RestLength;
                     Vector2 force = s.Stiffness * deltaX * AB;
-                    //sForces[j] = force;
 
                     
 
@@ -373,7 +364,6 @@ namespace SoftBodyLibrary
                 //bends in a rod
 
                 int[] bendIndices = rod.BendIndices;
-                //Vector2[] bForces = new Vector2[bendIndices.Length * 2];
 
                 for (int j = 0; j < bendIndices.Length; j++)
                 {
@@ -409,11 +399,6 @@ namespace SoftBodyLibrary
                     Vector2 fAB = perpAB * angleDiff * b.Stiffness;
                     Vector2 fBC = perpBC * angleDiff * b.Stiffness;
                     
-
-
-                    //bForces[2 * j] = perpAB;
-                    //bForces[(2 * j) + 1] = perpBC;
-
                     //FORCE
                     pA.ForceBuffer -= fAB;
                     pB.ForceBuffer += (fAB + fBC);
@@ -436,11 +421,6 @@ namespace SoftBodyLibrary
                         float omegaAC = sAB_perpAB / magAB + sCB_perpBC / magBC;
                         float lengthRatioAB = magAB / (magAB + magBC);
                         float lengthRatioBC = 1 - lengthRatioAB;
-
-                        /*
-                        Vector2 AC_DAMP = omegaAC * rod.BendDamping * magAB * perpAB;
-                        Vector2 CA_DAMP = omegaAC * rod.BendDamping * magBC * perpBC;
-                        */
 
                         if (Mathf.Abs(omegaAC) > 0)
                         {
@@ -472,141 +452,8 @@ namespace SoftBodyLibrary
                         rodLength++;
                     }
                 }
-                
-                //splitIndices[i] = splitIndex;
-                //springForces[i] = sForces;
-                //bendForces[i] = bForces;
             }
 
-            //break rods & apply force: not parallelizable
-            /*
-            for (int i = 0; i < rodCount; i++)
-            {
-                Rod[] thisRods = new Rod[] { rods[i] };
-                Vector2[] sForces = springForces[i];
-                Vector2[] bForces = bendForces[i];
-
-                if (splitIndices[i] != -1)
-                {
-                    Rod[] tempRods = rods[i].SplitRodAtParticle(splitIndices[i], particles, newParticlesBuffer, springs, bends);
-
-                    if (tempRods != null)
-                    {
-                        thisRods = tempRods;
-                        rods[i] = thisRods[0];
-                        newRodsBuffer.Add(thisRods[1]);
-                    }
-                }
-
-                int rightSpringStart = thisRods[0].SpringIndices.Length;
-                int rightBendStart = thisRods[0].BendIndices.Length + 1;
-
-                for (int r = 0; r < thisRods.Length; r++)
-                {
-                    //springs
-
-                    int start = rightSpringStart * r;
-                    int[] springIndices = thisRods[r].SpringIndices;
-
-                    for (int j = 0; j < springIndices.Length; j++)
-                    {
-                        ref Spring s = ref springs[springIndices[j]];
-
-                        int forceIndex = start + j;
-
-                        //particle A
-                        if (s.IndexA < particles.Length)
-                        {
-                            ref Particle pA = ref particles[s.IndexA];
-                            pA.ForceBuffer += sForces[forceIndex];
-                        }
-                        else
-                        {
-                            Particle pA = newParticlesBuffer[s.IndexA - particles.Length];
-                            pA.ForceBuffer += sForces[forceIndex];
-                            newParticlesBuffer[s.IndexA - particles.Length] = pA;
-                        }
-                        
-                        //particle B
-                        if (s.IndexB < particles.Length)
-                        {
-                            ref Particle pB = ref particles[s.IndexB];
-                            pB.ForceBuffer -= sForces[forceIndex];
-                        }
-                        else
-                        {
-                            Particle pB = newParticlesBuffer[s.IndexB - particles.Length];
-                            pB.ForceBuffer -= sForces[forceIndex];
-                            newParticlesBuffer[s.IndexB - particles.Length] = pB;
-                        }
-                    }
-
-                    //bends
-
-                    start = rightBendStart * r;
-                    int[] bendIndices = thisRods[r].BendIndices;
-
-                    for (int j = 0; j < bendIndices.Length; j++)
-                    {
-                        ref Bend b = ref bends[bendIndices[j]];
-
-                        int forceIndex1 = 2 * (start + j);
-                        int forceIndex2 = forceIndex1 + 1;
-
-                        Vector2 perpAB = bForces[forceIndex1];
-                        Vector2 perpBC = bForces[forceIndex2];
-
-                        //particle A
-                        if (b.IndexA < particles.Length)
-                        {
-                            ref Particle pA = ref particles[b.IndexA];
-                            pA.ForceBuffer -= perpAB;
-                        }
-                        else
-                        {
-                            Particle pA = newParticlesBuffer[b.IndexA - particles.Length];
-                            pA.ForceBuffer -= perpAB;
-                            newParticlesBuffer[b.IndexA - particles.Length] = pA;
-                        }
-
-                        //particle B
-                        ref Particle pB = ref particles[b.IndexB];
-                        pB.ForceBuffer += (perpAB + perpBC);
-
-                        //particle C
-                        if (b.IndexC < particles.Length)
-                        {
-                            ref Particle pC = ref particles[b.IndexC];
-                            pC.ForceBuffer -= perpBC;
-                        }
-                        else
-                        {
-                            Particle pC = newParticlesBuffer[b.IndexC - particles.Length];
-                            pC.ForceBuffer -= perpBC;
-                            newParticlesBuffer[b.IndexC - particles.Length] = pC;
-                        }
-                    }
-                }
-            }
-
-            // Add new particles to array
-            if (newParticlesBuffer.Count > 0)
-            {
-                int oldParticlesLength = particles.Length;
-                int oldRodsLength = rods.Length;
-               
-                int newCount = newParticlesBuffer.Count;
-
-                Array.Resize(ref particles, oldParticlesLength + newCount);
-                Array.Resize(ref rods, oldRodsLength + newCount);
-
-                for (int i = 0; i < newCount; i++)
-                {
-                    particles[oldParticlesLength + i] = newParticlesBuffer[i];
-                    rods[oldRodsLength + i] = newRodsBuffer[i];
-                }
-            }
-            */
 
             //anchor
             for (int i = 0; i < anchors.Length; i++)
@@ -652,15 +499,6 @@ namespace SoftBodyLibrary
 
                 float dist = move.magnitude;
                 if (dist < 0.00001) { continue; }
-
-                //AABB TEST
-                /*
-                float minX = predictedPosition.x - r;
-                float minY = predictedPosition.y - r;
-                float maxX = predictedPosition.x + r;
-                float maxY = predictedPosition.y + r;
-                */
-
                 
                 //collision
                 Vector2 dir = move / dist;
