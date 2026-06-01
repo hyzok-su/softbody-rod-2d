@@ -11,5 +11,5 @@
 <p/>
 
 <p>
-<img src="./docs/friction.gif" height="200" width="20%"/>    <img src="./docs/nofriction.gif" height="200" width="20%"/>  
+<img src="./docs/friction.gif" height="250" width="20%"/>    <img src="./docs/nofriction.gif" height="250" width="20%"/>  
 <p/>
