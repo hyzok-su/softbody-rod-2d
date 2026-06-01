@@ -26,7 +26,7 @@ Spring damping acts along the tangent direction of the beam segment, correspondi
 
 ## Joint
 
-This project also extends inter-segment connectivity through a unified joint formulation, where each connection between rod segments is parameterized as rigid, hinge, or partial within the same bending-constraint framework.
+This project also extends inter-segment connectivity through a unified joint formulation, where connections between rod segments are parameterized as rigid, hinge, or partially constrained joints. The formulation introduces a hidden line element connected to all incident rods within the same bending-constraint framework. This lightweight approach avoids explicitly modeling angular motion while still producing stable and visually plausible deformation results.
 
 <img src="./docs/system.png" height="300" />
 
