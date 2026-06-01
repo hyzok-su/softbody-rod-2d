@@ -15,18 +15,20 @@ Spring damping acts along the tangent direction of the beam segment, correspondi
 <p>
 <img src="./docs/nodampingRope.gif" height="250" width="20%"/>  <img src="./docs/damping&dragRope.gif" height="250" width="20%"/> <img src="./docs/dampingRope.gif" height="250" width="20%"/>
 <p/>
+
+- Rope: from left to right, show simulations without damping, with standard damping, and with orthogonal damping.
   
 <p>
 <img src="./docs/nodamping.gif" height="250" width="20%"/>    <img src="./docs/damping&drag.gif" height="250" width="20%"/>   <img src="./docs/damping.gif" height="250" width="20%"/>
 <p/>
+
+- Beam: from left to right, show simulations without damping, with standard damping, and with orthogonal damping.
   
 <p>
 <img src="./docs/nodampingPendulum.gif" height="200" width="30%"/>    <img src="./docs/conventionalDampingPendulum.gif" height="200" width="30%"/>   <img src="./docs/ourdampingPendulum.gif" height="200" width="30%"/>
 <p/>
 
-- The three rows, from top to bottom, illustrate rope-like, beam-like, and mixed structural behaviors. 
-
-- The three columns, from left to right, show simulations without damping, with standard damping, and with orthogonal damping.
+- Mix: from left to right, show simulations without damping, with standard damping, and with orthogonal damping.
 
 As a result, standard (isotropic) damping often leads to overly fast convergence or motion distortions that are less physically accurate. In contrast, orthogonal damping improves numerical stability and produces convergence behavior that more closely aligns with real physical dynamics.
 
