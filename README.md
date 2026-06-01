@@ -25,6 +25,7 @@ Spring damping acts along the tangent direction of the beam segment, correspondi
 <p/>
 
 The three rows, from top to bottom, illustrate rope-like, beam-like, and mixed structural behaviors, respectively. 
+
 The three columns, from left to right, show simulations without damping, with standard damping, and with orthogonal damping.
 
 ## Joint
