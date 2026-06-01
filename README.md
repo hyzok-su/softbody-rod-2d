@@ -15,5 +15,5 @@
 <p/>
 
 <p>
-<img src="./docs/hingeJoint.gif" height="235" width="20%"/>   <img src="./docs/partialJoint.gif" height="235" width="20%"/>  <img src="./docs/rigidJoint.gif" height="235" width="20%"/>   
+<img src="./docs/hingeJoint.gif" height="235" width="30%"/>   <img src="./docs/partialJoint.gif" height="235" width="30%"/>  <img src="./docs/rigidJoint.gif" height="235" width="30%"/>   
 <p/>
