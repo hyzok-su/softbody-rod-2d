@@ -61,3 +61,5 @@ Another key extension of the proposed method is its support for topological tear
 <p>
 <img src="./docs/staticfriction.gif" height="245" width="20%"/>   <img src="./docs/nofriction.gif" height="245" width="20%"/>  <img src="./docs/fullrestitution.gif" height="245" width="20%"/>    <img src="./docs/norestitution.gif" height="245" width="20%"/>  
 <p/>
+
+- The four images, from left to right, illustrate the behavior under static friction, no friction, restitution, and no restitution, respectively.
