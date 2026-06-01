@@ -24,9 +24,9 @@ Spring damping acts along the tangent direction of the beam segment, correspondi
 <img src="./docs/nodampingPendulum.gif" height="200" width="30%"/>    <img src="./docs/conventionalDampingPendulum.gif" height="200" width="30%"/>   <img src="./docs/ourdampingPendulum.gif" height="200" width="30%"/>
 <p/>
 
-The three rows, from top to bottom, illustrate rope-like, beam-like, and mixed structural behaviors. 
+- The three rows, from top to bottom, illustrate rope-like, beam-like, and mixed structural behaviors. 
 
-The three columns, from left to right, show simulations without damping, with standard damping, and with orthogonal damping.
+- The three columns, from left to right, show simulations without damping, with standard damping, and with orthogonal damping.
 
 As a result, standard (isotropic) damping often leads to overly fast convergence or motion distortions that are less physically accurate. In contrast, orthogonal damping improves numerical stability and produces convergence behavior that more closely aligns with real physical dynamics.
 
@@ -44,7 +44,7 @@ Consequently, different material and structural behaviors can be expressed withi
 <img src="./docs/hingeJoint.gif" height="235" width="30%"/>   <img src="./docs/partialJoint.gif" height="235" width="30%"/>  <img src="./docs/rigidJoint.gif" height="235" width="30%"/>   
 <p/>
 
-The three images, from left to right, illustrate the behavior of hinge joints, partial joints, and rigid joints, respectively.
+- The three images, from left to right, illustrate the behavior of hinge joints, partial joints, and rigid joints, respectively.
 
 ## Tearing
 
@@ -53,6 +53,8 @@ Another key extension of the proposed method is its support for topological tear
 <p>
 <img src="./docs/notearing.gif" height="300" width="30%"/>   <img src="./docs/tearing.gif" height="300" width="30%"/>  
 <p/>
+
+- The two images compare the differnet behaviors of simulation without or with tearing.
   
 ## Collision
 
