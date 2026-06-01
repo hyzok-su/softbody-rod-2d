@@ -1,6 +1,6 @@
 # Overview
 
-This project is a Unity 2d softbody rod simulation program based on mass-spring system, additionally using joints, orthogonally decoupled damper, and topological tearing. By modifying the parameters, the framework can represent different material behaviors without changing topology, ranging from flexible rope-like motion to rigid beam-like structures and hinge-based pendulum motion.
+This project is a Unity 2d softbody rod simulation program based on mass-spring system, additionally using joints, orthogonally decoupled damper, and topological tearing. By modifying the parameters, the framework can represent different material behaviors, ranging from rope-like motion to beam-like structures and hinge-based pendulum motion.
 
 <img src="./docs/wholeSystemDemo.gif" width="30%"/> 
 
