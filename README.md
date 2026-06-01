@@ -1,6 +1,6 @@
 # Overview
 
-This project is a Unity 2d softbody simulation program based on mass-spring system, additionally using bend joints, orthogonally decoupled damper, and topological tearing. 
+This project is a Unity 2d softbody simulation program based on mass-spring system, additionally using joints, orthogonally decoupled damper, and topological tearing. 
 
 <img src="./docs/wholeSystemDemo.gif" width="30%"/> 
 
