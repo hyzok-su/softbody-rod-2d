@@ -13,3 +13,7 @@
 <p>
 <img src="./docs/staticfriction.gif" height="235" width="20%"/>   <img src="./docs/nofriction.gif" height="235" width="20%"/>  <img src="./docs/fullrestitution.gif" height="235" width="20%"/>    <img src="./docs/norestitution.gif" height="235" width="20%"/>  
 <p/>
+
+<p>
+<img src="./docs/hingeJoint.gif" height="235" width="20%"/>   <img src="./docs/partialJoint.gif" height="235" width="20%"/>  <img src="./docs/rigidJoint.gif" height="235" width="20%"/>   
+<p/>
