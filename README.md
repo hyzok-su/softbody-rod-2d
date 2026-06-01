@@ -44,6 +44,8 @@ Consequently, different material and structural behaviors can be expressed withi
 <img src="./docs/hingeJoint.gif" height="235" width="30%"/>   <img src="./docs/partialJoint.gif" height="235" width="30%"/>  <img src="./docs/rigidJoint.gif" height="235" width="30%"/>   
 <p/>
 
+The three images, from left to right, illustrate the behavior of hinge joints, partial joints, and rigid joints, respectively.
+
 ## Tearing
 
 Another key extension of the proposed method is its support for topological tearing, whereby beam connectivity is adaptively modified under stress-based criteria, enabling segmentation of the structure during simulation. When internal forces exceed predefined thresholds, constraints and spring connections are selectively removed, resulting in fracture and the formation of independent deformable components.
