@@ -36,6 +36,8 @@ Consequently, different material and structural behaviors can be expressed withi
 
 ## Tearing
 
+Another key extension of the proposed method is its support for topological tearing, whereby beam connectivity is adaptively modified under stress-based criteria, enabling segmentation of the structure during simulation. When internal forces exceed predefined thresholds, constraints and spring connections are selectively removed, resulting in fracture and the formation of independent deformable components.
+
 <p>
 <img src="./docs/notearing.gif" height="300" width="30%"/>   <img src="./docs/tearing.gif" height="300" width="30%"/>  
 <p/>
