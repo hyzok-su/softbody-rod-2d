@@ -17,3 +17,7 @@
 <p>
 <img src="./docs/hingeJoint.gif" height="235" width="30%"/>   <img src="./docs/partialJoint.gif" height="235" width="30%"/>  <img src="./docs/rigidJoint.gif" height="235" width="30%"/>   
 <p/>
+
+<p>
+<img src="./docs/notearing.gif" height="235" width="30%"/>   <img src="./docs/tearing.gif" height="235" width="30%"/>  
+<p/>
