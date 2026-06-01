@@ -22,12 +22,6 @@ Spring damping acts along the tangent direction of the beam segment, correspondi
 <img src="./docs/nodampingPendulum.gif" height="200" width="30%"/>    <img src="./docs/conventionalDampingPendulum.gif" height="200" width="30%"/>   <img src="./docs/ourdampingPendulum.gif" height="200" width="30%"/>
 <p/>
 
-## Collision
-
-<p>
-<img src="./docs/staticfriction.gif" height="235" width="20%"/>   <img src="./docs/nofriction.gif" height="235" width="20%"/>  <img src="./docs/fullrestitution.gif" height="235" width="20%"/>    <img src="./docs/norestitution.gif" height="235" width="20%"/>  
-<p/>
-
 ## Joint
 
 <p>
@@ -38,4 +32,10 @@ Spring damping acts along the tangent direction of the beam segment, correspondi
 
 <p>
 <img src="./docs/notearing.gif" height="300" width="30%"/>   <img src="./docs/tearing.gif" height="300" width="30%"/>  
+<p/>
+  
+## Collision
+
+<p>
+<img src="./docs/staticfriction.gif" height="235" width="20%"/>   <img src="./docs/nofriction.gif" height="235" width="20%"/>  <img src="./docs/fullrestitution.gif" height="235" width="20%"/>    <img src="./docs/norestitution.gif" height="235" width="20%"/>  
 <p/>
