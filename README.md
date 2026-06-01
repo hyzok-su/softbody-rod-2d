@@ -2,8 +2,10 @@
 
 This project is a Unity 2d softbody rod simulation program based on mass-spring system, additionally using joints, orthogonally decoupled damper, and topological tearing. By modifying the parameters, the framework can represent different material behaviors, ranging from rope-like motion to beam-like structures and hinge-based pendulum motion.
 
-<img src="./docs/wholeSystemDemo.gif" width="30%"/> 
-
+<p>
+<img src="./docs/wholeSystemDemo.gif" height="350"/> <img src="./docs/system.png" height="350" />
+<p/>
+  
 ## Orthogonal Damper
 
 In contrast to conventional mass–spring systems, which typically employ a single global damping term applied uniformly to particle velocities, the proposed method decomposes damping into multiple physically interpretable components to achieve more controlled and anisotropic energy dissipation. Specifically, damping is separated into spring-aligned damping, rotational (bending) damping, and aerodynamic drag.
