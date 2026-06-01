@@ -1,5 +1,5 @@
 <p>
-<img src="./docs/nodampingRope.gif" height="250" width="300"/>  <img src="./docs/damping&dragRope.gif" height="250"/> <img src="./docs/dampingRope.gif" height="250"/>
+<img src="./docs/nodampingRope.gif" height="250" width="150"/>  <img src="./docs/damping&dragRope.gif" height="250"/> <img src="./docs/dampingRope.gif" height="250"/>
 <p/>
   
 <p>
