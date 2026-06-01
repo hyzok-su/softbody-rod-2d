@@ -19,5 +19,5 @@
 <p/>
 
 <p>
-<img src="./docs/notearing.gif" height="235" width="30%"/>   <img src="./docs/tearing.gif" height="235" width="30%"/>  
+<img src="./docs/notearing.gif" height="300" width="30%"/>   <img src="./docs/tearing.gif" height="300" width="30%"/>  
 <p/>
