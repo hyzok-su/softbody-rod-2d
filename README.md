@@ -31,7 +31,7 @@ Spring damping acts along the tangent direction of the beam segment, correspondi
 <p/>
 
 
-- from left to right, show simulations without damping, with standard damping, and with orthogonal damping.
+- The three images, from left to right, show simulations without damping, with standard damping, and with orthogonal damping.
 
 As a result, standard (isotropic) damping often leads to overly fast convergence or motion distortions that are less physically accurate. In contrast, orthogonal damping improves numerical stability and produces convergence behavior that more closely aligns with real physical dynamics.
 
