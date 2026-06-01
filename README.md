@@ -6,6 +6,10 @@ This project is a Unity 2d softbody rod simulation program based on mass-spring 
 
 ## Orthogonal Damper
 
+In contrast to conventional mass–spring systems, which typically employ a single global damping term applied uniformly to particle velocities, the proposed method decomposes damping into multiple physically interpretable components to achieve more controlled and anisotropic energy dissipation. Specifically, damping is separated into spring-aligned damping, rotational (bending) damping, and aerodynamic drag.
+
+Spring damping acts along the tangent direction of the beam segment, corresponding to the line-of-action velocity between connected particles, and primarily attenuates axial oscillations. Rotational damping, defined in the perpendicular direction to the beam segment, is applied to velocity components that contribute to angular motion and bending, thereby directly controlling curvature-induced oscillations. Aerodynamic drag introduces an additional global dissipation term that scales with velocity magnitude, modeling ambient resistance.
+
 <p>
 <img src="./docs/nodampingRope.gif" height="250" width="20%"/>  <img src="./docs/damping&dragRope.gif" height="250" width="20%"/> <img src="./docs/dampingRope.gif" height="250" width="20%"/>
 <p/>
