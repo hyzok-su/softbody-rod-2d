@@ -11,5 +11,5 @@
 <p/>
 
 <p>
-<img src="./docs/staticfriction.gif" height="240" width="20%"/>   <img src="./docs/nofriction.gif" height="240" width="20%"/>  <img src="./docs/fullrestitution.gif" height="240" width="20%"/>    <img src="./docs/norestitution.gif" height="240" width="20%"/>  
+<img src="./docs/staticfriction.gif" height="235" width="20%"/>   <img src="./docs/nofriction.gif" height="235" width="20%"/>  <img src="./docs/fullrestitution.gif" height="235" width="20%"/>    <img src="./docs/norestitution.gif" height="235" width="20%"/>  
 <p/>
